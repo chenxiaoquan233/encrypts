@@ -8,7 +8,7 @@ TEA(Tiny Encryption Algorithm), 一次可以加密64 bit(8 byte, 或2 int_32)，
 
 ### 加密过程图示（一轮）
 
-<img src="teaEnc.png" alt="1" style="zoom: 25%;" />
+<img src="teaEnc.png" alt="1" width="280" />
 
 ### 公式表示
 
