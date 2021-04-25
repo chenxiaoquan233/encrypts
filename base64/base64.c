@@ -49,3 +49,8 @@ void encode(const char* input, char* output)
         output[k++] = '=';
     }
 }
+
+void decode(char* input, char* output)
+{
+    
+}
