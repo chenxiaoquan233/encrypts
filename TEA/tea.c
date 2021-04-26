@@ -1,8 +1,8 @@
-const int delta = 0x9E3779B9;
+const unsigned int delta = 0x9E3779B9;
 
-void encrypt(int* value, int* key, int round)
+void encrypt(unsigned int* value, unsigned int* key, int round)
 {
-    int l = value[0], r = value[1], sum = 0;
+    unsigned int l = value[0], r = value[1], sum = 0;
     for(int i = 0; i < round; ++i)
     {
         l += ((r << 4) + key[0]) ^ (r + sum) ^ ((r >> 5) + key[1]);
@@ -12,9 +12,9 @@ void encrypt(int* value, int* key, int round)
     value[0] = l, value[1] = r;
 }
 
-void decrypt(int* value, int* key, int round)
+void decrypt(unsigned int* value, unsigned int* key, int round)
 {
-    int l = value[0], r = value[1], sum = delta * round;
+    unsigned int l = value[0], r = value[1], sum = delta * round;
     for(int i = 0; i < round; ++i)
     {
         r -= ((l << 4) + key[2]) ^ (l + delta * i) ^ ((l >> 5) + key[3]);
