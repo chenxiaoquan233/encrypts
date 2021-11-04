@@ -1,4 +1,6 @@
+#ifndef _STRING_H
 #include <string.h>
+#endif
 
 char table[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 

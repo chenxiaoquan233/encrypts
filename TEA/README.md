@@ -10,7 +10,7 @@ TEA(Tiny Encryption Algorithm), 一次可以加密64 bit(8 byte, 或2 int_32)，
 
 <img src="teaEnc.png" alt="1" width="280" />
 
-### 公式表示
+### 伪码表示
 
 L' = L + ((R << 4) + K[0]) ^ (R + delta_i) ^ ((R >> 5) + K[1])
 
@@ -20,7 +20,7 @@ R' = R + ((L' << 4) + K[2]) ^ (L' + delta_i) ^ ((L' >> 5) + K[3])
 
 解密过程即是加密过程的逆过程
 
-### 公式表示
+### 伪码表示
 
 R = R' - ((L' << 4) + K[2]) ^ (L' + delta_i) ^ ((L' >> 5) + K[3])
 
